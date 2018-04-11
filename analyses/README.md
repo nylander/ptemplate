@@ -1,4 +1,4 @@
-# ptemplate -- analyses
+# ptemplate -- results
 
 **Version:** 2016-01-25
 

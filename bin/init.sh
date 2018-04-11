@@ -29,9 +29,12 @@ $(find bin -type f -executable ! -iname "init.sh" -printf "* %p\n")
 
 ## Data
 
-Data in the \`data\` folder.
+Data in the \`data\` folder, raw data in the \`raw-data\` folder.
 
 ## Analyses
+
+Analyses in \`analyses\` folder.
+
 
 Text here.
 
@@ -70,7 +73,7 @@ fi
 
 ## Create other README.md files
 if true ; then
-  for f in bin data results src ; do
+  for f in bin data raw-data analyses results src ; do
   cat << EOF > "$f"/README.md
 # $PROJNAME -- $f
 
