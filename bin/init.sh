@@ -58,14 +58,15 @@ if command -v git >/dev/null 2>&1; then
   echo -n "* "
   git init
   cat << EOF > .gitignore
-old
+old/
+tmp/
 EOF
   cat << EOF >> doc/README.md
 Version Control
 
 To track changes (after creating and editing files)
 
-    git add *
+    git add --all 
     git commit -m "first commit"
 
 EOF
