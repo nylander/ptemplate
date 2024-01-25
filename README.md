@@ -1,6 +1,6 @@
 # ptemplate - A project template
 
-- Last modified: tor jan 25, 2024  11:46
+- Last modified: tor jan 25, 2024  11:54
 - Sign: JN
 
 Inspired by [A Quick Guide to Organizing Computational Biology
@@ -40,8 +40,9 @@ This will create the following file structure:
     │   └── README.md
     └── tmp/
 
-Files are set under verion control (git), except folders `raw-data/`, `old/`
-and `tmp/`.  This can be changed by editing the `.gitignore` file.
+Files are set under version control (git), except folders `raw-data/`, `old/`
+and `tmp/`. This can be changed by editing the `.gitignore` file.
 
 Furthermore, project-specific file-formatting settings for editors can
 be set using the `.editorconfig` file. See more: <https://editorconfig.org/>.
+
