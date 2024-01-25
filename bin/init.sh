@@ -61,7 +61,8 @@ if command -v git >/dev/null 2>&1; then
   cat << EOF > .gitignore
 old/
 tmp/
-raw-data/
+raw-data/*
+!raw-data/README.md
 EOF
   cat << EOF >> doc/README.md
 Version Control
