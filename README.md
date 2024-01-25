@@ -1,42 +1,47 @@
 # ptemplate - A project template
 
-Inspired by [A Quick Guide to Organizing Computational Biology Projects](http://dx.doi.org/10.1371/journal.pcbi.1000424)
+- Last modified: tor jan 25, 2024  11:46
+- Sign: JN
+
+Inspired by [A Quick Guide to Organizing Computational Biology
+Projects](http://dx.doi.org/10.1371/journal.pcbi.1000424)
 
 To initialize a new `project`, run these three steps:
 
-    git clone https://github.com/nylander/ptemplate.git project
+    $ git clone https://github.com/nylander/ptemplate.git project
+    $ cd project
+    $ sh bin/init.sh
 
-    cd project
-
-    sh bin/init.sh
-
-This will create the following file structure, as well as set the files
-under version control (git). Note that folders `old/` and `tmp/` are
-excluded from git control. This can be changed by editing the `.gitignore`
-file.
+This will create the following file structure:
 
     ptemplate/
     ├── analyses
-    │   └── README.md
+    │   └── README.md
     ├── bin
-    │   ├── fasta_unwrap.pl
-    │   ├── fasta_wrap.pl
-    │   ├── get_fasta_info.pl
-    │   ├── init.sh
-    │   └── README.md
+    │   ├── fasta2tab
+    │   ├── README.md
+    │   └── tab2fasta
     ├── data
-    │   └── README.md
+    │   └── README.md
     ├── doc
-    │   └── README.md
-    ├── old
+    │   └── README.md
+    ├──.editorconfig
+    ├──.gitignore
+    ├──.git/
+    ├── old/
     ├── raw-data
-    │   └── README.md
+    │   └── README.md
     ├── README.md
     ├── results
-    │   └── README.md
+    │   └── README.md
     ├── src
-    │   ├── fastaparser.pl
-    │   ├── parse_fasta.pl
-    │   └── README.md
-    └── tmp
+    │   ├── fasta_parser.pl
+    │   ├── fasta_parser.py
+    │   └── README.md
+    └── tmp/
 
+Files are set under verion control (git), except folders `raw-data/`, `old/`
+and `tmp/`.  This can be changed by editing the `.gitignore` file.
+
+Furthermore, project-specific file-formatting settings for editors can
+be set using the `.editorconfig` file. See more: <https://editorconfig.org/>.

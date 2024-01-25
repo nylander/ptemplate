@@ -6,6 +6,7 @@ TIMESTAMP=$(date '+%Y-%m-%d')
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 PROJPATH=$(dirname $SCRIPTPATH)
 PROJNAME=$(basename $PROJPATH)
+
 echo "* Project name:" $PROJNAME
 
 ## Create doc/README.md
@@ -60,13 +61,14 @@ if command -v git >/dev/null 2>&1; then
   cat << EOF > .gitignore
 old/
 tmp/
+raw-data/
 EOF
   cat << EOF >> doc/README.md
 Version Control
 
 To track changes (after creating and editing files)
 
-    git add --all 
+    git add --all
     git commit -m "first commit"
 
 EOF
@@ -92,12 +94,15 @@ fi
 
 ## List files and folders
 echo "* Path, files and folders:"
+
 if command -v tree >/dev/null 2>&1; then
   tree -I init.sh "$PROJPATH"
 else
   ls -I init.sh -F "$PROJPATH"
 fi
+
 echo "* Start with file doc/README.md"
 
 ## Move init.sh to old/
-mv  "$0" $PROJPATH/old/.
+mv "$0" $PROJPATH/old/
+

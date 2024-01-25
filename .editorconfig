@@ -1,0 +1,28 @@
+# Last modified: tor jan 25, 2024  09:52
+# Sign: JN
+# Source: https://github.com/editorconfig/editorconfig-vim
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{py,sh}]
+indent_style = space
+indent_size = 2
+
+[*.html]
+indent_size = 2
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
+

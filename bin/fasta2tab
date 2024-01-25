@@ -1,0 +1,11 @@
+#!/usr/bin/env perl
+# fasta2tab
+# By Johan Nylander
+local $/ = '>';
+while(<>) {
+    chomp;
+    next if($_ eq '');
+    my ($h, @S) = split /\n/;
+    my $s = join('', @S);
+    print STDOUT "$h\t$s\n" unless (!$h);
+}
